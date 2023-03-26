@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\CodeProjects\\Evernote\\EverNoteArchive\\EverNoteArchive.csproj",
+      "projectUniqueName": "D:\\CodeProjects\\Evernote2\\EverNoteArchive\\EverNoteArchive.csproj",
       "projectName": "EverNoteArchive",
-      "projectPath": "D:\\CodeProjects\\Evernote\\EverNoteArchive\\EverNoteArchive.csproj",
+      "projectPath": "D:\\CodeProjects\\Evernote2\\EverNoteArchive\\EverNoteArchive.csproj",
       "packagesPath": "C:\\Users\\dan\\.nuget\\packages\\",
-      "outputPath": "D:\\CodeProjects\\Evernote\\EverNoteArchive\\obj\\",
+      "outputPath": "D:\\CodeProjects\\Evernote2\\EverNoteArchive\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\dan\\AppData\\Roaming\\NuGet\\NuGet.Config",
