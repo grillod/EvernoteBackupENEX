@@ -24,7 +24,7 @@ namespace EverNoteArchive
 
         const string EnexFilePath = "D:\\tmp\\";
         const string NoteBookIdentifierPrefix = "ZZ_";
-        const string RootOutputFolder = "D:\\MailBackups\\EverNoteBackup";
+        const string RootOutputFolder = "D:\\MailAndEvernoteBackups\\EverNoteBackup";
         const string HTML_TEMPLATE = "<!DOCTYPE html><html><body>{0}<br><br><u>Attachments:</u><br>{1}</body></html>";
         const string ATTACHMENT_TEMPLATE = "<a href=\"{0}\"> {1} </a><br>";
       
