@@ -24,6 +24,7 @@ namespace EverNoteArchive
 
         const string EnexFilePath = "D:\\tmp\\";
         const string NoteBookIdentifierPrefix = "ZZ_";
+        const string NoteBookIdentifierPrefixLowerCase = "zz_";
         const string RootOutputFolder = "D:\\MailAndEvernoteBackups\\EverNoteBackup";
         const string HTML_TEMPLATE = "<!DOCTYPE html><html><body>{0}<br><br><u>Attachments:</u><br>{1}</body></html>";
         const string ATTACHMENT_TEMPLATE = "<a href=\"{0}\"> {1} </a><br>";
@@ -279,7 +280,8 @@ namespace EverNoteArchive
 
                 if (innerText.Length < NoteBookIdentifierPrefix.Length) continue;
 
-                if (innerText.Substring(0, NoteBookIdentifierPrefix.Length) == NoteBookIdentifierPrefix)
+                if (innerText.Substring(0, NoteBookIdentifierPrefix.Length) == NoteBookIdentifierPrefix ||
+                   (innerText.Substring(0, NoteBookIdentifierPrefix.Length) == NoteBookIdentifierPrefixLowerCase))
                 {
                     return innerText.Substring(NoteBookIdentifierPrefix.Length);
                 }
