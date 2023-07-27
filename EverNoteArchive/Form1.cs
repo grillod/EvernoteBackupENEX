@@ -28,6 +28,8 @@ namespace EverNoteArchive
         const string RootOutputFolder = "D:\\MailAndEvernoteBackups\\EverNoteBackup";
         const string HTML_TEMPLATE = "<!DOCTYPE html><html><body>{0}<br><br><u>Attachments:</u><br>{1}</body></html>";
         const string ATTACHMENT_TEMPLATE = "<a href=\"{0}\"> {1} </a><br>";
+        const string UNFILED_FOLDER = "Unfiled";
+        string Errors = "";
       
         
 
@@ -39,7 +41,7 @@ namespace EverNoteArchive
             Doit();
             label1.Text = "Cleaning up ENEX Files";
             CleanUpEnexInputFiles();
-            MessageBox.Show("Done");
+            MessageBox.Show("Done" + Errors);
 
         }
 
@@ -103,6 +105,11 @@ namespace EverNoteArchive
             using (XmlNodeList Tags = noteNode.SelectNodes("tag"))
             {
                 FolderName = GetNotebookFolderName(Tags);
+            }
+
+            if (FolderName == UNFILED_FOLDER)
+            {
+                Errors +="\n" + Title + "Was Unfiled\n";
             }
 
         }
@@ -287,7 +294,7 @@ namespace EverNoteArchive
                 }
             }
 
-            return "Unfiled";
+            return UNFILED_FOLDER;
         }
 
         private string GetNoteBody(XmlNode noteNode)
